@@ -38,6 +38,8 @@ namespace GMPR2512.Lesson05Coroutines
                         Vector2 direction = (collision.rigidbody.position - (Vector2)transform.position).normalized;
                         normal = direction;
                     }
+                    // it turns out that the "normal" that I calculated was the opposite direction to what I wanted
+                    // no problem, I just switched the sign
                     Vector2 impulse = -normal * _bumperForce;
                     collision.rigidbody.AddForce(impulse, ForceMode2D.Impulse);
                 }
