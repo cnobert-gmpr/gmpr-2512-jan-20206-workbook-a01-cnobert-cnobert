@@ -5,6 +5,7 @@ namespace GMPR2512.Lesson06Pinball
     public class Flipper : MonoBehaviour
     {
         private HingeJoint2D _joint2D;
+        public bool _respondToInput;
         [SerializeField] private bool _rightFlipper;
 
         void Awake()
