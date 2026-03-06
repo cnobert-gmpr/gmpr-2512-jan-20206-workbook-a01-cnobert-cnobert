@@ -242,6 +242,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GMPR2512.Lesson07TransformAndInput::GMPR2512.Lesson07TransformAndInput.Ship
   _movementSpeed: 5
+  _rotationSpeed: 200
+  _scaleSpeed: 1.2
+  _minRotation: -25
+  _maxRotation: 25
+  _projectilePrefab: {fileID: 888141797368957671, guid: 1e1f0f31a851f4889a9e3a8cf1d38f74, type: 3}
 --- !u!212 &1592394428
 SpriteRenderer:
   serializedVersion: 2
@@ -313,9 +318,56 @@ Transform:
   m_LocalPosition: {x: -5.895037, y: -4.282233, z: 0}
   m_LocalScale: {x: 0.88380593, y: 1.8935578, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1782540352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1782540351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782540352}
+  - component: {fileID: 1782540353}
+  m_Layer: 0
+  m_Name: Projectile Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1782540352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782540351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1592394429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782540353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782540351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cfaa5a1208448cb92e7cc38b0f79d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GMPR2512::GMPR2512.ShowGizmo
+  _gizmoColour: {r: 1, g: 0, b: 0, a: 1}
+  _radius: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
