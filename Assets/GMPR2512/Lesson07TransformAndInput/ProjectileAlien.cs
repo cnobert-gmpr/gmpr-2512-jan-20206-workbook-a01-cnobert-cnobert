@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GMPR2512.Lesson07TransformAndInput
 {
-    public class Projectile : MonoBehaviour
+    public class ProjectileAlien : MonoBehaviour
     {
         [SerializeField] private GameObject _splosionPrefab;
         private float _speed = 10;
@@ -19,7 +19,7 @@ namespace GMPR2512.Lesson07TransformAndInput
         }
         void OnTriggerEnter2D(Collider2D collider)
         {
-            if(collider.tag == "Alien")
+            if(collider.tag == "Player")
             {
                 Instantiate(_splosionPrefab, transform.position, transform.rotation);
                 Destroy(collider.gameObject);
