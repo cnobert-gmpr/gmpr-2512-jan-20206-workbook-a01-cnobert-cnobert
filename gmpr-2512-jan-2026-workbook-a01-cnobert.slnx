@@ -69,6 +69,7 @@
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="Unity.2D.Aseprite.Common.csproj" />
+  <Project Path="Lesson08ScenesAndUI.csproj" />
   <Project Path="GMPR2512.Lesson06Pinball.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
