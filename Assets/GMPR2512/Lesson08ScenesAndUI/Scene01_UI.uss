@@ -1,0 +1,60 @@
+/* Deep void background */
+.menu-container {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0211;
+}
+
+/* The "Glitch" Button: Using asymmetric borders for a jagged look */
+.menu-button {
+    width: 960px;
+    height: 180px;
+    margin: 20px;
+    
+    background-color: #ff00ff;
+    color: #00ffff;
+    font-size: 80px;
+    -unity-font-style: bold;
+    
+    /* Creating a 'jagged' border effect with different widths */
+    border-left-width: 40px;
+    border-right-width: 5px;
+    border-top-width: 2px;
+    border-bottom-width: 20px;
+    border-color: #00ffff;
+
+    /* Unity-safe transition */
+    transition-duration: 0.1s;
+}
+
+/* Make every other button shift horizontally to break the grid */
+#btn-options, #btn-exit {
+    margin-left: 200px;
+    background-color: #00ffff;
+    color: #ff00ff;
+    border-color: #ff00ff;
+    border-left-width: 5px;
+    border-right-width: 40px;
+}
+
+/* Hover: The "Eye-Bleed" Whiteout */
+.menu-button:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    border-color: #ff0000;
+    
+    /* Swap the 'jagged' borders to make it look like it's flipping */
+    border-left-width: 5px;
+    border-right-width: 40px;
+    border-top-width: 20px;
+    border-bottom-width: 2px;
+}
+
+/* Active: Shrink and invert */
+.menu-button:active {
+    background-color: #000000;
+    color: #ffffff;
+    border-width: 60px;
+    border-color: #ffffff;
+}
